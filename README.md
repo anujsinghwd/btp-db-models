@@ -53,6 +53,28 @@ const { Lead, Inquiry } = getModelsForService('CRM');
 const { Expense, IncomeSource } = getModelsForService('FINANCE');
 ```
 
+### Using Interfaces (Type-Only Imports)
+
+For better performance and cleaner code, import only the TypeScript interfaces:
+
+```typescript
+import type { IHotel, IHotelBooking, IUser } from 'btp-db-model';
+
+// Use in DTOs, API responses, validation schemas, etc.
+const createHotelDTO: Partial<IHotel> = {
+  name: 'My Hotel',
+  address: '123 Main St'
+};
+
+// Mock data for testing
+const mockHotel: IHotel = { ... };
+```
+
+**Benefits:**
+- ✅ Lighter bundle size (types are stripped at compile time)
+- ✅ No Mongoose dependency in frontend/shared code
+- ✅ Perfect for DTOs, API contracts, and validation schemas
+
 ### Available Services
 
 - `HOTEL_ADMIN`: Hotel, HotelBooking, Room, RoomBooking, PackageBooking

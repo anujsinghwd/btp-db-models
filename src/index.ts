@@ -2,6 +2,9 @@ import * as BookingService from './services/hotel.admin';
 import * as UserService from './services/btp.user';
 import * as CRMService from './services/crm';
 
+// Export all interfaces
+export * from './interfaces';
+
 // Export everything as a flat structure (optional, for backward compatibility or ease of use)
 export * from './models/BookingUser';
 export * from './models/Config';
