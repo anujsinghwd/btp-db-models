@@ -40,10 +40,14 @@ export const Services = {
   HOTEL_ADMIN: BookingService,
   BTP_USER: UserService,
   CRM: CRMService,
-};
+} as const;
 
 export type ServiceName = keyof typeof Services;
 
-export const getModelsForService = (serviceName: ServiceName) => {
+// Type-safe service getter with overloads
+export function getModelsForService(serviceName: 'HOTEL_ADMIN'): typeof BookingService;
+export function getModelsForService(serviceName: 'BTP_USER'): typeof UserService;
+export function getModelsForService(serviceName: 'CRM'): typeof CRMService;
+export function getModelsForService(serviceName: ServiceName) {
   return Services[serviceName];
-};
+}
