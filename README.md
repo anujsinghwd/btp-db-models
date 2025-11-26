@@ -6,11 +6,22 @@ Private NPM package for Banjarey Travel Partners (BTP) Mongoose models and const
 
 Since this is a private Git package, install it using the Git URL:
 
+### Using SSH (Recommended)
 ```bash
-npm install git+ssh://git@github.com:username/btp-db-model.git
-# OR
-npm install git+https://github.com/username/btp-db-model.git
+npm install git+ssh://git@github.com:your-username/btp-db-model.git
 ```
+
+### Using HTTPS
+```bash
+npm install git+https://github.com/your-username/btp-db-model.git
+```
+
+### From a specific branch
+```bash
+npm install git+ssh://git@github.com:your-username/btp-db-model.git#branch-name
+```
+
+**Note**: The package will automatically build when installed thanks to the `prepare` script.
 
 ## Usage
 
@@ -52,6 +63,35 @@ const { Expense, IncomeSource } = getModelsForService('FINANCE');
 
 1.  **Build**: `npm run build`
 2.  **Watch**: `tsc -w`
+
+## Troubleshooting
+
+### Installation fails with "Cannot find module" errors
+
+This happens when the package isn't built during installation. Make sure:
+1. The `prepare` script is in `package.json`
+2. TypeScript and other devDependencies are listed in `package.json`
+3. The consuming project has access to the Git repository
+
+### TypeScript errors when importing
+
+Make sure your consuming project's `tsconfig.json` includes:
+```json
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  }
+}
+```
+
+### Peer dependency warnings
+
+Install mongoose in your consuming project:
+```bash
+npm install mongoose
+```
+
 
 ## License
 
