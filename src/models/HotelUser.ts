@@ -2,35 +2,7 @@ import mongoose, { Schema, Document } from "mongoose";
 import { v4 as uuidv4 } from "uuid";
 import { HOTEL_USER_ROLE } from "../constants/hotel.user.constant";
 
-export interface IHotelUser extends Document {
-  user_id: string;
-  hotel_id: mongoose.Types.ObjectId;
-  name: string;
-  email: string;
-  mobile: number;
-  password: string;
-  raw_password?: string;
-  role: string;
-  permissions: {
-    can_create_booking: boolean;
-    can_edit_booking: boolean;
-    can_cancel_booking: boolean;
-    can_manage_rooms: boolean;
-    can_view_reports: boolean;
-    can_manage_users: boolean;
-    can_manage_pricing: boolean;
-    can_process_payments: boolean;
-  };
-  profile_image?: string;
-  is_active: boolean;
-  last_login?: Date;
-  accessToken?: string;
-  created_by?: mongoose.Types.ObjectId;
-  isDeleted: boolean;
-  other_config: Record<string, any>;
-  created_at: Date;
-  updated_at: Date;
-}
+import { IHotelUser } from "../interfaces/IHotelUser";
 
 const HotelUserSchema: Schema = new Schema({
   user_id: {

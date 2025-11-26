@@ -2,68 +2,7 @@ import mongoose, { Schema, Document } from "mongoose";
 import { v4 as uuidv4 } from "uuid";
 import { ROOM_STATUS, ROOM_AMENITY, BED_TYPE, ROOM_VIEW, ROOM_TYPE } from "../constants/room.constant";
 
-export interface IRoom extends Document {
-  room_id: string;
-  hotel_id: mongoose.Types.ObjectId;
-  room_number: string;
-  room_type: string;
-  price_per_night: number;
-  weekend_price?: number;
-  peak_season_price?: number;
-  off_season_price?: number;
-  discount_percentage: number;
-  status: string;
-  current_booking_id?: mongoose.Types.ObjectId;
-  available_from?: Date;
-  unavailable_dates: any[];
-  capacity: number;
-  max_adults: number;
-  max_children: number;
-  bed_type: string;
-  number_of_beds: number;
-  bed_configuration: {
-    single_beds: number;
-    double_beds: number;
-    king_beds: number;
-    queen_beds: number;
-  };
-  floor: number;
-  size?: number;
-  view: string;
-  smoking_allowed: boolean;
-  pet_friendly: boolean;
-  balcony: boolean;
-  amenities: string[];
-  features: any[];
-  facilities: any[];
-  description?: string;
-  images: any[];
-  min_nights: number;
-  max_nights?: number;
-  advance_booking_days: number;
-  housekeeping_status: {
-    last_cleaned?: Date;
-    cleaned_by?: mongoose.Types.ObjectId;
-    notes?: string;
-  };
-  maintenance_history: Array<{
-    issue?: string;
-    reported_date?: Date;
-    resolved_date?: Date;
-    reported_by?: mongoose.Types.ObjectId;
-    cost?: number;
-    notes?: string;
-  }>;
-  extra_person_charge: number;
-  extra_bed_charge: number;
-  rating: number;
-  is_featured: boolean;
-  created_by?: mongoose.Types.ObjectId;
-  isDeleted: boolean;
-  is_active: boolean;
-  created_at: Date;
-  updated_at: Date;
-}
+import { IRoom } from "../interfaces/IRoom";
 
 const RoomSchema: Schema = new Schema({
   room_id: {
