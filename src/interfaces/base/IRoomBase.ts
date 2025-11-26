@@ -1,0 +1,62 @@
+export interface IRoomBase {
+  room_id: string;
+  hotel_id: string;
+  room_number: string;
+  room_type: string;
+  price_per_night: number;
+  weekend_price?: number;
+  peak_season_price?: number;
+  off_season_price?: number;
+  discount_percentage: number;
+  status: string;
+  current_booking_id?: string;
+  available_from?: Date;
+  unavailable_dates: any[];
+  capacity: number;
+  max_adults: number;
+  max_children: number;
+  bed_type: string;
+  number_of_beds: number;
+  bed_configuration: {
+    single_beds: number;
+    double_beds: number;
+    king_beds: number;
+    queen_beds: number;
+  };
+  floor: number;
+  size?: number;
+  view: string;
+  smoking_allowed: boolean;
+  pet_friendly: boolean;
+  balcony: boolean;
+  amenities: string[];
+  features: any[];
+  facilities: any[];
+  description?: string;
+  images: any[];
+  min_nights: number;
+  max_nights?: number;
+  advance_booking_days: number;
+  housekeeping_status: {
+    last_cleaned?: Date;
+    cleaned_by?: string;
+    notes?: string;
+  };
+  maintenance_history: Array<{
+    issue?: string;
+    reported_date?: Date;
+    resolved_date?: Date;
+    reported_by?: string;
+    cost?: number;
+    notes?: string;
+  }>;
+  extra_person_charge: number;
+  extra_bed_charge: number;
+  rating: number;
+  is_featured: boolean;
+  created_by?: string;
+  isDeleted: boolean;
+  is_active: boolean;
+  created_at: Date;
+  updated_at: Date;
+}

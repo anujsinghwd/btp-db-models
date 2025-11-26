@@ -1,30 +1,4 @@
 import { Document } from "mongoose";
+import { IBookingUserBase } from "./base/IBookingUserBase";
 
-export interface IBookingUser extends Document {
-  user_id: string;
-  gender?: "M" | "F" | "O";
-  name: string;
-  dob?: Date;
-  mobile?: number;
-  altername_mobile_number?: number;
-  whatsapp_no?: number;
-  social_links?: Record<string, any>;
-  email: string;
-  aadhar_card_no?: number;
-  password: string;
-  raw_password: string;
-  routes: any[];
-  scopes: string[];
-  permissions: any[];
-  capabilities?: Record<string, any>;
-  role: string;
-  image?: string;
-  accessToken?: string;
-  isActive: boolean;
-  created_by?: string;
-  otp_info?: Record<string, any>;
-  updated_by?: string;
-  isDeleted: boolean;
-  created_at?: Date;
-  updated_at?: Date;
-}
+export interface IBookingUser extends IBookingUserBase, Document {}

@@ -14,3 +14,20 @@ export * from './IIncomeSource';
 export * from './IConfig';
 export * from './ITransporter';
 export * from './IVehicle';
+
+// Export Base Interfaces (Pure Types)
+export * from './base/IHotelBase';
+export * from './base/IHotelBookingBase';
+export * from './base/IUserBase';
+export * from './base/IHotelUserBase';
+export * from './base/IBookingUserBase';
+export * from './base/IRoomBase';
+export * from './base/IRoomBookingBase';
+export * from './base/IPackageBookingBase';
+export * from './base/ILeadBase';
+export * from './base/IInquiryBase';
+export * from './base/IExpenseBase';
+export * from './base/IIncomeSourceBase';
+export * from './base/IConfigBase';
+export * from './base/ITransporterBase';
+export * from './base/IVehicleBase';
