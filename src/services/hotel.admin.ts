@@ -3,10 +3,12 @@ export { Hotel } from '../models/Hotel';
 export { HotelBooking } from '../models/HotelBooking';
 export { Room } from '../models/Room';
 export { RoomBooking } from '../models/RoomBooking';
-export { RoomEnhanced } from '../models/RoomEnhanced';
 export { PackageBooking } from '../models/PackageBooking';
+export { HotelUser } from '../models/HotelUser';
 
 // Constants
 export * from '../constants/hotel.booking.constant';
 export * from '../constants/room.constant';
 export * from '../constants/booking_status';
+export * from '../constants/hotel.user.constant';
+

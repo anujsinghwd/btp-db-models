@@ -44,10 +44,9 @@ const { Expense, IncomeSource } = getModelsForService('FINANCE');
 
 ### Available Services
 
-- `BOOKING`: Hotel, HotelBooking, Room, RoomBooking, RoomEnhanced, PackageBooking
-- `USER`: User, HotelUser, BookingUser, Transporter
-- `CRM`: Lead, Inquiry
-- `FINANCE`: Expense, IncomeSource
+- `HOTEL_ADMIN`: Hotel, HotelBooking, Room, RoomBooking, PackageBooking
+- `BTP_USER`: User, HotelUser, BookingUser, Transporter
+- `CRM`: Lead, Inquiry, Hotel, HotelUser, BookingUser, Transporter, HotelBooking, RoomBooking, PackageBooking
 
 ## Development
 
