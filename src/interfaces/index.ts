@@ -1,8 +1,16 @@
 // Export all interfaces
 export * from './IHotel';
-
-// TODO: Add more interfaces as they are created
-// export * from './IHotelBooking';
-// export * from './IUser';
-// export * from './IRoom';
-// etc...
+export * from './IHotelBooking';
+export * from './IUser';
+export * from './IHotelUser';
+export * from './IBookingUser';
+export * from './IRoom';
+export * from './IRoomBooking';
+export * from './IPackageBooking';
+export * from './ILead';
+export * from './IInquiry';
+export * from './IExpense';
+export * from './IIncomeSource';
+export * from './IConfig';
+export * from './ITransporter';
+export * from './IVehicle';

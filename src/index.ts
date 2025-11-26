@@ -5,22 +5,22 @@ import * as CRMService from './services/crm';
 // Export all interfaces
 export * from './interfaces';
 
-// Export everything as a flat structure (optional, for backward compatibility or ease of use)
-export * from './models/BookingUser';
-export * from './models/Config';
-export * from './models/Expense';
-export * from './models/Hotel';
-export * from './models/HotelBooking';
-export * from './models/HotelUser';
-export * from './models/IncomeSource';
-export * from './models/Inquiry';
-export * from './models/Lead';
-export * from './models/PackageBooking';
-export * from './models/Room';
-export * from './models/RoomBooking';
-export * from './models/Transporter';
-export * from './models/Vehicle';
-export * from './models/userModel';
+// Export Models (without re-exporting interfaces)
+export { BookingUser } from './models/BookingUser';
+export { Config } from './models/Config';
+export { Expense } from './models/Expense';
+export { Hotel } from './models/Hotel';
+export { HotelBooking } from './models/HotelBooking';
+export { HotelUser } from './models/HotelUser';
+export { IncomeSource } from './models/IncomeSource';
+export { Inquiry } from './models/Inquiry';
+export { Lead } from './models/Lead';
+export { PackageBooking } from './models/PackageBooking';
+export { Room } from './models/Room';
+export { RoomBooking } from './models/RoomBooking';
+export { Transporter } from './models/Transporter';
+export { Vehicle } from './models/Vehicle';
+export { User } from './models/userModel';
 
 // Export Constants
 export * from './constants/booking_status';
