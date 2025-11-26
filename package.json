@@ -1,0 +1,33 @@
+{
+  "name": "btp-db-model",
+  "version": "1.0.0",
+  "description": "Mongoose models and constants for BTP applications",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongoose",
+    "models",
+    "btp",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "mongoose": "^8.0.0"
+  },
+  "dependencies": {
+    "@types/uuid": "^10.0.0",
+    "uuid": "^13.0.0",
+    "uuidv4": "^6.2.13"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "mongoose": "^8.0.0",
+    "typescript": "^5.3.3"
+  }
+}
