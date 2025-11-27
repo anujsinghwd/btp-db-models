@@ -12,6 +12,9 @@ export interface IBookingUser extends Document {
   social_links?: Record<string, any>;
   email: string;
   aadhar_card_no?: number;
+  email_verified?: boolean;
+  forgot_password_otp?: string;
+  forgot_password_otp_expiry?: Date;
   id_proofs?: {
     id_type: string;
     id_number: string;
@@ -72,6 +75,16 @@ const BookingUserSchema: Schema = new Schema({
   },
   aadhar_card_no: {
     type: Number,
+  },
+  email_verified: {
+    type: Boolean,
+    default: false,
+  },
+  forgot_password_otp: {
+    type: String,
+  },
+  forgot_password_otp_expiry: {
+    type: Date,
   },
   id_proofs: [
     {

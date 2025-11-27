@@ -28,4 +28,7 @@ export interface IBookingUserBase {
   isDeleted: boolean;
   created_at?: Date;
   updated_at?: Date;
+  email_verified?: boolean;
+  forgot_password_otp?: string;
+  forgot_password_otp_expiry?: Date;
 }
