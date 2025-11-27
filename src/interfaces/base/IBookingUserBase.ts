@@ -1,3 +1,5 @@
+import { IIdProof } from "../IIdProof";
+
 export interface IBookingUserBase {
   user_id: string;
   gender?: "M" | "F" | "O";
@@ -9,6 +11,7 @@ export interface IBookingUserBase {
   social_links?: Record<string, any>;
   email: string;
   aadhar_card_no?: number;
+  id_proofs?: IIdProof[];
   password: string;
   raw_password: string;
   routes: any[];

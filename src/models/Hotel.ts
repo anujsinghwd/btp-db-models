@@ -166,6 +166,7 @@ const HotelSchema: Schema = new Schema({
   },
   hotel_code: {
     type: String,
+    unique: true,
   },
   since: {
     type: Date,

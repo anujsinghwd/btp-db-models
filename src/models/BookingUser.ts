@@ -12,6 +12,11 @@ export interface IBookingUser extends Document {
   social_links?: Record<string, any>;
   email: string;
   aadhar_card_no?: number;
+  id_proofs?: {
+    id_type: string;
+    id_number: string;
+    urls: string[];
+  }[];
   password: string;
   raw_password: string;
   routes: any[];
@@ -68,6 +73,13 @@ const BookingUserSchema: Schema = new Schema({
   aadhar_card_no: {
     type: Number,
   },
+  id_proofs: [
+    {
+      id_type: { type: String },
+      id_number: { type: String },
+      urls: [{ type: String }],
+    },
+  ],
   password: {
     type: String,
     required: true,
