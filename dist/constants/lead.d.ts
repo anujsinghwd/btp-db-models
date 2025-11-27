@@ -1,0 +1,42 @@
+export declare const LEAD_STATUS: {
+    readonly PENDING: "PENDING";
+    readonly ACTIVE: "ACTIVE";
+    readonly CONVERTED: "CONVERTED";
+    readonly CLOSED: "CLOSED";
+    readonly FRESH: "FRESH";
+    readonly LOST: "LOST";
+    readonly ARCHIVED: "ARCHIVED";
+    readonly DELETED: "DELETED";
+    readonly INACTIVE: "INACTIVE";
+    readonly FOLLOWUP: "FOLLOWUP";
+    readonly INQUIRY: "INQUIRY";
+    readonly BOOKING: "BOOKING";
+    readonly CANCELLED: "CANCELLED";
+    readonly COMPLETED: "COMPLETED";
+    readonly EXPIRED: "EXPIRED";
+    readonly REJECTED: "REJECTED";
+    readonly MOVED: "MOVED";
+};
+export type LeadStatus = typeof LEAD_STATUS[keyof typeof LEAD_STATUS];
+export declare const LEAD_SOURCE: {
+    readonly YOUTUBE: "youtube";
+    readonly CALL: "call";
+    readonly INSTAGRAM: "instagram";
+    readonly OTHER: "other";
+    readonly FACEBOOK: "facebook";
+    readonly WHATSAPP: "whatsapp";
+    readonly EMAIL: "email";
+    readonly WEBSITE: "website";
+    readonly SMS: "sms";
+    readonly REFERRAL: "referral";
+    readonly OFFLINE: "offline";
+    readonly ADMIN: "admin";
+};
+export type LeadSource = typeof LEAD_SOURCE[keyof typeof LEAD_SOURCE];
+export declare const LEAD_STAGE: {
+    readonly NEW: "New";
+    readonly QUALIFIED: "Qualified";
+    readonly CONVERTED: "Converted";
+    readonly NOT_CONTACTED: "Not contacted";
+};
+export type LeadStage = typeof LEAD_STAGE[keyof typeof LEAD_STAGE];

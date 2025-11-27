@@ -1,0 +1,22 @@
+export declare const VEHICLE_BRANDS: {
+    readonly SUZUKI: "Maruti Suzuki";
+    readonly HYUNDAI: "Hyundai";
+    readonly TOYOTA: "Toyota";
+    readonly HONDA: "Honda";
+    readonly KIA: "Kia";
+    readonly VOLVO: "Volvo";
+    readonly VOLKSVAGEN: "Volksvagen";
+    readonly FORD: "Ford";
+    readonly BMW: "BMW";
+    readonly RENAULT: "Renault";
+    readonly SKODA: "Skoda";
+    readonly NISSAN: "Nissan";
+    readonly MAZDA: "Mazda";
+    readonly CHEVROLET: "Chevrolet";
+    readonly FIAT: "Fiat";
+    readonly JEEP: "Jeep";
+    readonly MAHINDRA: "Mahindra";
+    readonly TATA: "Tata";
+    readonly HINDUSTAN: "Hindustan";
+};
+export type VehicleBrand = typeof VEHICLE_BRANDS[keyof typeof VEHICLE_BRANDS];
