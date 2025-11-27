@@ -22,9 +22,7 @@
     "mongoose": "^6.0.0 || ^8.0.0"
   },
   "dependencies": {
-    "@types/uuid": "^10.0.0",
-    "uuid": "^13.0.0",
-    "uuidv4": "^6.2.13"
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
