@@ -158,7 +158,6 @@ const recordSchema = new Schema(
     createdBy: {
       type: Schema.Types.ObjectId,
       ref: "booking_admin_users",
-      required: true,
     },
     updatedBy: {
       type: Schema.Types.ObjectId,
