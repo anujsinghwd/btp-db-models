@@ -4,6 +4,9 @@
   "description": "Mongoose models and constants for BTP applications",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
