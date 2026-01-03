@@ -14,6 +14,7 @@ export { IncomeSource } from '../models/IncomeSource';
 export { Expense } from '../models/Expense';
 export { Config } from '../models/Config';
 export { BookingUser } from '../models/BookingUser';
+export { Itinerary } from '../models/Itinerary';
 
 // Constants
 export * from '../constants/lead';

@@ -36,7 +36,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Services = exports.User = exports.Vehicle = exports.Transporter = exports.RoomBooking = exports.Room = exports.PackageBooking = exports.Lead = exports.Inquiry = exports.IncomeSource = exports.HotelUser = exports.HotelBooking = exports.Hotel = exports.Expense = exports.Config = exports.BookingUser = void 0;
+exports.Services = exports.Itinerary = exports.User = exports.Vehicle = exports.Transporter = exports.RoomBooking = exports.Room = exports.PackageBooking = exports.Lead = exports.Inquiry = exports.IncomeSource = exports.HotelUser = exports.HotelBooking = exports.Hotel = exports.Expense = exports.Config = exports.BookingUser = void 0;
 exports.getModelsForService = getModelsForService;
 const BookingService = __importStar(require("./services/hotel.admin"));
 const UserService = __importStar(require("./services/btp.user"));
@@ -74,6 +74,8 @@ var Vehicle_1 = require("./models/Vehicle");
 Object.defineProperty(exports, "Vehicle", { enumerable: true, get: function () { return Vehicle_1.Vehicle; } });
 var userModel_1 = require("./models/userModel");
 Object.defineProperty(exports, "User", { enumerable: true, get: function () { return userModel_1.User; } });
+var Itinerary_1 = require("./models/Itinerary");
+Object.defineProperty(exports, "Itinerary", { enumerable: true, get: function () { return Itinerary_1.Itinerary; } });
 // Export Constants
 __exportStar(require("./constants/booking_status"), exports);
 __exportStar(require("./constants/expense"), exports);

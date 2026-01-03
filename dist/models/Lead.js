@@ -113,7 +113,6 @@ const recordSchema = new mongoose_1.Schema({
     createdBy: {
         type: mongoose_1.Schema.Types.ObjectId,
         ref: "booking_admin_users",
-        required: true,
     },
     updatedBy: {
         type: mongoose_1.Schema.Types.ObjectId,

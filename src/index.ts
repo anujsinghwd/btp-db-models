@@ -21,6 +21,7 @@ export { RoomBooking } from './models/RoomBooking';
 export { Transporter } from './models/Transporter';
 export { Vehicle } from './models/Vehicle';
 export { User } from './models/userModel';
+export { Itinerary } from './models/Itinerary';
 
 // Export Constants
 export * from './constants/booking_status';

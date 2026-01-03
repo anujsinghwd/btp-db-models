@@ -14,6 +14,7 @@ export * from './IIncomeSource';
 export * from './IConfig';
 export * from './ITransporter';
 export * from './IVehicle';
+export * from './IItinerary';
 
 // Export Base Interfaces (Pure Types)
 export * from './base/IHotelBase';
@@ -31,3 +32,4 @@ export * from './base/IIncomeSourceBase';
 export * from './base/IConfigBase';
 export * from './base/ITransporterBase';
 export * from './base/IVehicleBase';
+export * from './base/IItineraryBase';

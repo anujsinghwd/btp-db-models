@@ -30,6 +30,7 @@ __exportStar(require("./IIncomeSource"), exports);
 __exportStar(require("./IConfig"), exports);
 __exportStar(require("./ITransporter"), exports);
 __exportStar(require("./IVehicle"), exports);
+__exportStar(require("./IItinerary"), exports);
 // Export Base Interfaces (Pure Types)
 __exportStar(require("./base/IHotelBase"), exports);
 __exportStar(require("./base/IHotelBookingBase"), exports);
@@ -46,3 +47,4 @@ __exportStar(require("./base/IIncomeSourceBase"), exports);
 __exportStar(require("./base/IConfigBase"), exports);
 __exportStar(require("./base/ITransporterBase"), exports);
 __exportStar(require("./base/IVehicleBase"), exports);
+__exportStar(require("./base/IItineraryBase"), exports);
