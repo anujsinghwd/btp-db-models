@@ -1,8 +1,8 @@
 export declare const HOTEL_USER_ROLE: {
-    readonly ADMIN: "HOTEL_ADMIN";
-    readonly MANAGER: "HOTEL_MANAGER";
-    readonly RECEPTIONIST: "HOTEL_RECEPTIONIST";
-    readonly STAFF: "HOTEL_STAFF";
+    readonly ADMIN: "ADMIN";
+    readonly MANAGER: "MANAGER";
+    readonly RECEPTIONIST: "RECEPTIONIST";
+    readonly STAFF: "STAFF";
     readonly HOUSEKEEPING: "HOUSEKEEPING";
     readonly ACCOUNTANT: "ACCOUNTANT";
     readonly MAINTENANCE: "MAINTENANCE";

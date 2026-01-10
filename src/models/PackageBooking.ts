@@ -20,7 +20,22 @@ export interface IPackageBooking extends Document {
   return_date?: Date;
   total_package_amount: number;
   advance: number;
-  package_payment_history?: any[];
+  package_payment_history?: Array<{
+    amount: number;
+    date: Date;
+    mode: string;
+    status: 'received' | 'pending';
+    transaction_id?: string;
+    remark?: string;
+  }>;
+  payment_history?: Array<{
+    category: 'transport' | 'accommodation' | 'other';
+    sub_category: string;
+    amount: number;
+    status: 'paid' | 'pending' | 'partial';
+    date?: Date;
+    remark?: string;
+  }>;
   hotel_info?: any[];
   cab_info?: any[];
   meal_type?: string;
@@ -76,6 +91,54 @@ const assignmentHistorySchema = new Schema(
   },
   { timestamps: true }
 );
+
+const ExpenseSchema = new Schema({
+  category: {
+    type: String,
+    enum: ['transport', 'accommodation', 'other'],
+    required: true
+  },
+  sub_category: {
+    type: String, // e.g., 'cab', 'bus', 'flight', 'hotel', 'camp'
+    required: true
+  },
+  amount: {
+    type: Number,
+    required: true
+  },
+  status: {
+    type: String,
+    enum: ['paid', 'pending', 'partial'],
+    default: 'pending'
+  },
+  date: {
+    type: Date,
+    default: Date.now
+  },
+  remark: String
+});
+
+const CustomerPaymentSchema = new Schema({
+  amount: {
+    type: Number,
+    required: true
+  },
+  date: {
+    type: Date,
+    default: Date.now
+  },
+  mode: {
+    type: String,
+    required: true
+  },
+  status: {
+    type: String,
+    enum: ['received', 'pending'],
+    default: 'received'
+  },
+  transaction_id: String,
+  remark: String
+});
 
 const PackageBookingSchema: Schema = new Schema({
   user_id: {
@@ -144,9 +207,8 @@ const PackageBookingSchema: Schema = new Schema({
     type: Number,
     default: 0,
   },
-  package_payment_history: {
-    type: Array,
-  },
+  package_payment_history: [CustomerPaymentSchema],
+  payment_history: [ExpenseSchema],
   hotel_info: {
     type: Array,
   },

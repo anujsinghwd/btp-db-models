@@ -19,7 +19,22 @@ export interface IPackageBooking extends Document {
     return_date?: Date;
     total_package_amount: number;
     advance: number;
-    package_payment_history?: any[];
+    package_payment_history?: Array<{
+        amount: number;
+        date: Date;
+        mode: string;
+        status: 'received' | 'pending';
+        transaction_id?: string;
+        remark?: string;
+    }>;
+    payment_history?: Array<{
+        category: 'transport' | 'accommodation' | 'other';
+        sub_category: string;
+        amount: number;
+        status: 'paid' | 'pending' | 'partial';
+        date?: Date;
+        remark?: string;
+    }>;
     hotel_info?: any[];
     cab_info?: any[];
     meal_type?: string;

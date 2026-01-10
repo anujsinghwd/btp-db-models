@@ -13,6 +13,7 @@ export { IncomeSource } from '../models/IncomeSource';
 export { Expense } from '../models/Expense';
 export { Config } from '../models/Config';
 export { BookingUser } from '../models/BookingUser';
+export { Itinerary } from '../models/Itinerary';
 export * from '../constants/lead';
 export * from '../constants/inquery-status';
 export * from '../constants/hotel.booking.constant';

@@ -47,17 +47,17 @@ const itineraryHotelSchema = new mongoose_1.Schema({
     nights: { type: [Number], required: true },
     hotel_name: { type: String, required: true },
     location: { type: String, required: true },
-    check_in_date: { type: String, required: true },
+    check_in_date: { type: String },
     room_info: { type: String, required: true },
-    meal_plan: { type: String, required: true },
+    meal_plan: { type: String },
     image: { type: String },
     sharing_plan: { type: String },
 });
 const itineraryTransportSchema = new mongoose_1.Schema({
     cab_type: { type: String, required: true }, // sedan, suv, etc
     cab_name: { type: String, required: true }, // alto, dezire, innova, etc
-    pickup_datetime: { type: String, required: true },
-    drop_datetime: { type: String, required: true },
+    pickup_datetime: { type: String },
+    drop_datetime: { type: String },
     pickup_place: { type: String, required: true },
     drop_place: { type: String, required: true }
 });
@@ -74,14 +74,14 @@ const itineraryHeaderFooterSchema = new mongoose_1.Schema({
     gst: { type: String, default: "09BEOPG4392C1ZD" },
 });
 const itinerarySchema = new mongoose_1.Schema({
-    client_name: { type: String, required: true },
+    client_name: { type: String },
     destination: { type: String, required: true },
-    start_date: { type: String, required: true },
-    end_date: { type: String, required: true },
+    start_date: { type: String },
+    end_date: { type: String },
     duration: { type: String, required: true },
     special_request: { type: String },
     pax: { type: String },
-    total_price: { type: Number, required: true },
+    total_price: { type: Number },
     header: { type: itineraryHeaderFooterSchema, required: true },
     footer: { type: itineraryHeaderFooterSchema, required: true },
     days: { type: [itineraryDaySchema], required: true },

@@ -53,6 +53,52 @@ const assignmentHistorySchema = new mongoose_1.Schema({
         ref: "booking_admin_users",
     },
 }, { timestamps: true });
+const ExpenseSchema = new mongoose_1.Schema({
+    category: {
+        type: String,
+        enum: ['transport', 'accommodation', 'other'],
+        required: true
+    },
+    sub_category: {
+        type: String, // e.g., 'cab', 'bus', 'flight', 'hotel', 'camp'
+        required: true
+    },
+    amount: {
+        type: Number,
+        required: true
+    },
+    status: {
+        type: String,
+        enum: ['paid', 'pending', 'partial'],
+        default: 'pending'
+    },
+    date: {
+        type: Date,
+        default: Date.now
+    },
+    remark: String
+});
+const CustomerPaymentSchema = new mongoose_1.Schema({
+    amount: {
+        type: Number,
+        required: true
+    },
+    date: {
+        type: Date,
+        default: Date.now
+    },
+    mode: {
+        type: String,
+        required: true
+    },
+    status: {
+        type: String,
+        enum: ['received', 'pending'],
+        default: 'received'
+    },
+    transaction_id: String,
+    remark: String
+});
 const PackageBookingSchema = new mongoose_1.Schema({
     user_id: {
         type: mongoose_1.Schema.Types.ObjectId,
@@ -120,9 +166,8 @@ const PackageBookingSchema = new mongoose_1.Schema({
         type: Number,
         default: 0,
     },
-    package_payment_history: {
-        type: Array,
-    },
+    package_payment_history: [CustomerPaymentSchema],
+    payment_history: [ExpenseSchema],
     hotel_info: {
         type: Array,
     },
