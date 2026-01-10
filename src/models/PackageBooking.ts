@@ -23,16 +23,16 @@ export interface IPackageBooking extends Document {
   package_payment_history?: Array<{
     amount: number;
     date: Date;
-    mode: string;
-    status: 'received' | 'pending';
+    mode?: string;
+    status?: 'received' | 'pending';
     transaction_id?: string;
     remark?: string;
   }>;
   payment_history?: Array<{
     category: 'transport' | 'accommodation' | 'other';
-    sub_category: string;
+    sub_category?: string;
     amount: number;
-    status: 'paid' | 'pending' | 'partial';
+    status?: 'paid' | 'pending' | 'partial';
     date?: Date;
     remark?: string;
   }>;
