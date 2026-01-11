@@ -1,6 +1,11 @@
 import mongoose, { Schema, Document } from "mongoose";
 import { SCOPES } from "../constants/scopes";
 
+interface HotelAppConfig {
+  permissionKeys: any;
+  appModules: any;
+}
+
 export interface IConfig extends Document {
   roleOptions: Array<{ value: string; label: string }>;
   capabilityOptions: {
@@ -16,7 +21,13 @@ export interface IConfig extends Document {
   expenseCategories: Array<{ value: string; label: string }>;
   paymentMethods: Array<{ value: string; label: string }>;
   incomeCategories: Array<{ value: string; label: string }>;
+  hotelAppConfig: HotelAppConfig;
 }
+
+const hotelAppConfigSchema = new Schema({
+  permissionKeys: { type: Schema.Types.Mixed, default: {} },
+  appModules: { type: Schema.Types.Mixed, default: {} },
+});
 
 const ConfigSchema: Schema = new Schema(
   {
@@ -95,7 +106,8 @@ const ConfigSchema: Schema = new Schema(
         value: { type: String, required: true },
         label: { type: String, required: true },
       },
-    ]
+    ],
+    hotelAppConfig: { type: hotelAppConfigSchema, default: {} },
   },
   { timestamps: true }
 );
